@@ -1,0 +1,172 @@
+body {
+  background-color: #212121;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.views-row {
+  position: relative;
+}
+
+.views-field-field-preview-image {
+  float: left;
+}
+
+.views-field-field-title-hook,
+.views-field-title {
+  display: inline-block;
+}
+
+.views-field-created {
+  font-size: 0.5em; 
+}
+
+.text-content-bg {
+  float: left;
+  height: 330px;
+}
+
+.bg-animation {
+  position: absolute;
+  top: 0;
+}
+
+.text {
+  font-size: 30px;
+  position: absolute;
+  z-index: 10;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding-left: 50px;
+}
+
+.animation-hover #right {
+  animation: infromright 8s ease forwards;
+  animation-direction: alternate;
+}
+
+.animation-hover #top {
+  animation: infromtop 5s ease forwards;
+  animation-direction: alternate;
+}
+
+.animation-hover #bottom {
+  animation: infrombottom 4s ease forwards;
+  animation-direction: alternate;
+}
+
+.animation-hover #white-top {
+  animation: inwhitetop 1.5s ease forwards;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+
+.animation-hover #white-bottom {
+  animation: inwhitebottom 1.5s ease forwards;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+
+
+.animation-off #right {
+  animation: outtoright 6s ease reverse;
+}
+
+.animation-off #top {
+  animation: outtotop 5s ease reverse;
+}
+
+.animation-off #bottom {
+  animation: outtobottom 4s ease reverse;
+}
+
+.animation-off #white-top {
+  animation: outwhitetop 2s ease reverse;
+}
+
+.animation-off #white-bottom {
+  animation: outwhitebottom 2s ease reverse;
+}
+
+
+
+/* In animations */
+@keyframes infromright {
+  30% {
+    transform: translateX(-55%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+
+@keyframes infromtop {
+  30% {
+    transform: translate(38%, 100%);
+  }
+  100% {
+    transform: translate(44%, 100%);
+  }
+}
+
+@keyframes infrombottom {
+  40% {
+    transform: translate(35%, -100%);
+  }
+  100% {
+    transform: translate(50%, -100%);
+  }
+}
+
+@keyframes inwhitetop {
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes inwhitebottom {
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+/* Out animations */
+@keyframes outtoright {
+  70% {
+    transform: translateX(-55%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+
+@keyframes outtotop {
+  30% {
+    transform: translate(38%, 100%);
+  }
+  100% {
+    transform: translate(44%, 100%);
+  }
+}
+
+@keyframes outtobottom {
+  40% {
+    transform: translate(35%, -100%);
+  }
+  100% {
+    transform: translate(50%, -100%);
+  }
+}
+
+@keyframes outwhitetop {
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes outwhitebottom {
+  100% {
+    transform: translateY(-30%);
+  }
+}
