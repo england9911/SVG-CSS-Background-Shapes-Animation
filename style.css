@@ -16,6 +16,10 @@ body {
   display: inline-block;
 }
 
+.views-field-field-title-hook {
+  
+}
+
 .views-field-created {
   font-size: 0.5em; 
 }
@@ -37,8 +41,18 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
+  color: #000000;
   padding-left: 50px;
+}
+
+.animation-hover .views-field-field-title-hook {
+  animation: blacktowhite 2s ease forwards;
+  animation-direction: alternate;
+}
+
+.animation-hover #rightbar {
+  animation: rightbarin 2s ease forwards;
+  animation-direction: alternate;
 }
 
 .animation-hover #right {
@@ -69,6 +83,12 @@ body {
 }
 
 
+
+
+.animation-off #rightbar {
+  animation: rightbarout 9s ease reverse;
+}
+
 .animation-off #right {
   animation: outtoright 6s ease reverse;
 }
@@ -92,12 +112,34 @@ body {
 
 
 /* In animations */
+@keyframes blacktowhite {
+  0%   {
+    color: #000;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes rightbarin {
+  0%   {
+    fill: #62bfc1;
+  }
+  40%   {
+    fill: #e5feff;
+  }
+  100% {
+    fill: #8ed1d2;
+    transform: translateX(-90%);
+  }
+}
+
 @keyframes infromright {
   30% {
     transform: translateX(-55%);
   }
   100% {
-    transform: translate(-50%, 0%);
+    transform: translate(-55%, 0%);
   }
 }
 
@@ -132,12 +174,25 @@ body {
 }
 
 /* Out animations */
+@keyframes rightbarout {
+  0%   {
+    fill: #62bfc1;
+  }
+  30% {
+    fill: #fff;
+  }
+  100% {
+    fill: #8ed1d2;
+    transform: translateX(-90%);
+  }
+}
+
 @keyframes outtoright {
   70% {
     transform: translateX(-55%);
   }
   100% {
-    transform: translate(-50%, 0%);
+    transform: translate(-55%, 0%);
   }
 }
 
@@ -170,3 +225,4 @@ body {
     transform: translateY(-30%);
   }
 }
+
